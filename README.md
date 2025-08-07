@@ -17,6 +17,13 @@ A full-stack CRUD web application built using **Node.js**, **Express**, **EJS te
 
 ## 🖼️ Screenshots
 
+<img src="https://github.com/user-attachments/assets/2b37307b-7887-4b63-a42a-f67b724825b7" alt="Home Page">
+<img src="https://github.com/user-attachments/assets/1fef66c0-488d-42b0-9453-25f814f18880" alt="Category Page">
+<img src="https://github.com/user-attachments/assets/fffac1ee-1340-4d1d-978c-6246bddedce9" alt="Edit Category">
+<img src="https://github.com/user-attachments/assets/6fa7a4de-ebf2-474a-87db-05f62643f339" alt="Product Page 1">
+<img src="https://github.com/user-attachments/assets/05624b9b-c59f-4210-ade7-7de023cfd9e9" alt="Product Page 2">
+<img src="https://github.com/user-attachments/assets/b872594e-a660-4dca-ac8a-df8894f219a4" alt="Add Product Page">
+<img src="https://github.com/user-attachments/assets/60ad2d80-dfbf-4894-94ab-f179a8d4f824" alt="Product Page 2">
 
 ---
 
