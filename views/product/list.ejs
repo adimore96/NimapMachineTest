@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product List</title>
+</head>
+ 
+<%- include('../partials/navbar') %>
+
+<body class="">
+  <div class="container" style="height: calc(100vh - 130px); align-content: center;">
+
+  
+  <h2 class="mb-3 text-center">Product List</h2>
+  <a href="/product/create" class="btn btn-success mb-3">Add Product</a>
+  <table class="table table-bordered table-hover text-center">
+    <thead class="table-dark">
+      <tr>
+        <th>ProductId</th>
+        <th>ProductName</th>
+        <th>CategoryId</th>
+        <th>CategoryName</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% products.forEach(p => { %>
+        <tr>
+          <td><%= p.ProductId %></td>
+          <td><%= p.ProductName %></td>
+          <td><%= p.CategoryId %></td>
+          <td><%= p.CategoryName %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <nav>
+    <ul class="pagination">
+      <% for(let i = 1; i <= totalPages; i++) { %>
+        <li class="page-item <%= i === currentPage ? 'active' : '' %>">
+          <a class="page-link" href="/product?page=<%= i %>"><%= i %></a>
+        </li>
+      <% } %>
+    </ul>
+  </nav>
+  </div>
+</body>
+
+ <%- include('../partials/footer') %>
+</html>

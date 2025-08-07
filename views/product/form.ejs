@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= product.id ? 'Edit' : 'Add' %> Product</title>
+</head>
+
+<%- include('../partials/navbar') %>
+
+<body class="">
+    <div class="container" style="height: calc(100vh - 130px); align-content: center;">
+
+    
+  <h2 class="mb-3 text-center"><%= product.id ? 'Edit' : 'Add' %> Product</h2>
+  <form method="POST" action="<%= product.id ? '/product/edit/' + product.id : '/product/create' %>">
+    <div class="mb-3">
+      <label class="form-label">Product Name:</label>
+      <input name="name" class="form-control" value="<%= product.name || '' %>" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Category:</label>
+      <select name="category_id" class="form-select" required>
+        <% categories.forEach(c => { %>
+          <option value="<%= c.id %>" <%= product.category_id === c.id ? 'selected' : '' %>><%= c.name %></option>
+        <% }) %>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+  </div>
+</body>
+
+ <%- include('../partials/footer') %>
+
+</html>

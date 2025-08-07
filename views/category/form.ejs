@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= category.id ? 'Edit' : 'Add' %> Category
+  </title>
+</head>
+
+<%- include('../partials/navbar') %>
+
+  <body>
+    <div class="container" style="height: calc(100vh - 130px); align-content: center;">
+      <h2 class="mb-3 text-center">
+        <%= category.id ? 'Edit' : 'Add' %> Category
+      </h2>
+      <form method="POST" action="<%= category.id ? '/category/edit/' + category.id : '/category/create' %>">
+        <div class="mb-3">
+          <input name="name" class="form-control" value="<%= category.name || '' %>" placeholder="Category Name"
+            required />
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </body>
+
+  <%- include('../partials/footer') %>
+
+</html>
